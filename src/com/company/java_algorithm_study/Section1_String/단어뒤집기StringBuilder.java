@@ -1,20 +1,14 @@
-package com.company.java_algorithm_study.String;
+package com.company.java_algorithm_study.Section1_String;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class 단어뒤집기직접 {
+public class 단어뒤집기StringBuilder {
     public ArrayList<String> Solution(String[] str) {
         ArrayList<String> answer= new ArrayList<>();
-        for(String x : str) {
-            char[] s = x.toCharArray(); // 문자배열 생성
-            int lt=0, rt=x.length()-1;
-            while(lt < rt) {
-                char tmp = s[lt];
-                s[lt++] = s[rt];
-                s[rt--] = tmp;
-            }
-            String tmp = String.valueOf(s);
+
+        for(String s : str) {
+            String tmp = new StringBuilder(s).reverse().toString();
             answer.add(tmp);
         }
 
@@ -22,7 +16,7 @@ public class 단어뒤집기직접 {
     }
 
     public static void main(String[] args) {
-        단어뒤집기직접 T = new 단어뒤집기직접();
+        단어뒤집기StringBuilder T = new 단어뒤집기StringBuilder();
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         String[] strArr = new String[num];

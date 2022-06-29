@@ -1,4 +1,4 @@
-package com.company.java_algorithm_study.String;
+package com.company.java_algorithm_study.Section1_String;
 
 import java.util.Scanner;
 
