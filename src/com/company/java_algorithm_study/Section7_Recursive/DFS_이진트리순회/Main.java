@@ -3,6 +3,7 @@ package com.company.java_algorithm_study.Section7_Recursive.DFS_이진트리순�
 class Node {
     int data;
     Node lt, rt;
+    // 생성자
     public Node(int val) {
         data=val;
         lt=rt=null;
