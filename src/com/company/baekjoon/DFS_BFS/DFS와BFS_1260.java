@@ -9,10 +9,10 @@ public class DFS와BFS_1260 {
     static int n;
 
     static void DFS(int v) {
+        System.out.print(v + " ");
         for(int nv : graph.get(v)) {
             if (ch[nv] == 0) {
                 ch[nv] = 1;
-                System.out.print(nv + " ");
                 DFS(nv);
             }
         }
@@ -25,11 +25,11 @@ public class DFS와BFS_1260 {
         q.offer(v);
         while(!q.isEmpty()){
             int cv = q.poll();
+            System.out.print(cv + " ");
             for(int nv : graph.get(cv)){
                 if(ch[nv] == 0){
                     ch[nv] = 1;
                     q.offer(nv);
-                    System.out.print(nv + " ");
                 }
             }
         }
@@ -63,7 +63,6 @@ public class DFS와BFS_1260 {
             Collections.sort(graph.get(i));
         }
 
-        System.out.print(v + " ");
         ch[v] = 1;
         DFS(v);
 
@@ -72,8 +71,7 @@ public class DFS와BFS_1260 {
         for(int i = 0; i <=n; i++){
             ch[i] = 0;
         }
-        System.out.print(v + " ");
-        BFS(v);
 
+        BFS(v);
     }
 }
