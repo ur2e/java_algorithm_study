@@ -4,3 +4,5 @@ out/production/java/com/company/CalendarExam.class
 out/*
 /out
 out
+out/production/.DS_Store
+.idea/vcs.xml

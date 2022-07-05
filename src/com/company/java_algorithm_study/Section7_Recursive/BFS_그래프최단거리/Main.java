@@ -49,14 +49,14 @@ public class Main {
         graph = new ArrayList<ArrayList<Integer>>();
 
         // 정점 갯수만큼 인접리스트 객체 생성
-        for(int i = 1; i <= n; i++) {
+        for(int i = 0; i <= n; i++) {
             graph.add(new ArrayList<Integer>());
         }
 
         ch = new int[n+1];
         dis = new int[n+1];
 
-        for(int i = 1; i <= n; i++) {
+        for(int i = 0; i <= m; i++) {
             int a = sc.nextInt();
             int b = sc.nextInt();
             graph.get(a).add(b);
