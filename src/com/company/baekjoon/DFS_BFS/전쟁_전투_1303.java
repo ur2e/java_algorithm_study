@@ -33,6 +33,7 @@ public class 전쟁_전투_1303 {
             for (int i = 0; i < 4; i++) {
                 int nx = cv.x + dx[i];
                 int ny = cv.y + dy[i];
+                System.out.println(cv.x + " " + cv.y);
                 if (nx >= 0 && nx < m && ny >= 0 && ny < n) {
                     // 같다면
                     if (check[nx][ny] == 0 && isWhite == arr[nx][ny]) {
