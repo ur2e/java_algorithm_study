@@ -1,9 +1,9 @@
-package com.company.java_algorithm_study.section8_DFS_BFS;
+package com.company.java_algorithm_study.section8_DFS_BFS.DFS합이같은부분집합;
 
 
 import java.util.Scanner;
 
-public class DFS_합이같은부분집합 {
+public class Me {
     static int sum, num, tmpSum = 0;
     static int[] ch, arr;
     static String answer;
