@@ -22,6 +22,8 @@ public class 균형잡힌세상_4949 {
                     stack.push(x);
                 } else if (x == ']' || x == ')') {
                     if (stack.isEmpty()) {
+                        // ans를 no로 바꿔주기 위함
+                        stack.push(x);
                         break;
                     } else if (x == ']' && stack.peek() == '(') {
                         break;
@@ -32,7 +34,6 @@ public class 균형잡힌세상_4949 {
                     }
                 }
             }
-            // 여는 괄호가 더 많은 상황
             if (!stack.isEmpty()) {
                 ans = "no";
                 stack.clear();
