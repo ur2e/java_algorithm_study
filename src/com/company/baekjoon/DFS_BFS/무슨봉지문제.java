@@ -2,7 +2,7 @@ package com.company.baekjoon.DFS_BFS;
 
 import java.util.Scanner;
 
-public class Main {
+public class 무슨봉지문제 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

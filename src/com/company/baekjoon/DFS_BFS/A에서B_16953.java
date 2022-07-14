@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 public class A에서B_16953 {
     static long a, b;
     static int answer = -1;
-    static void bfs(long n, int count){
+    static void dfs(long n, int count){
         if(answer != -1) return;
         if(n == b) {
             answer = count;
@@ -17,9 +17,9 @@ public class A에서B_16953 {
         else if(n > b)   return;
         else{
             //System.out.println(count + " " + n);
-            bfs(n*2, count+1);
+            dfs(n*2, count+1);
             long tmp = (n*10) + 1;
-            bfs(tmp, count+1);
+            dfs(tmp, count+1);
         }
     }
     public static void main(String[] args) throws IOException {
@@ -28,7 +28,7 @@ public class A에서B_16953 {
         a = Long.parseLong(st.nextToken());
         b = Long.parseLong(st.nextToken());
 
-        bfs(a, 1);
+        dfs(a, 1);
 
         System.out.println(answer);
     }
