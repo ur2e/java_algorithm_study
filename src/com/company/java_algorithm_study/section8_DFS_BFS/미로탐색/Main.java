@@ -11,7 +11,8 @@ public class Main {
     static void dfs(int x, int y){
         if(x==7 && y ==7) {
             count++;
-            return;
+            // return 굳이 안써도 되는 듯 ~
+            // return;
         }
         else {
             for(int i = 0; i < 4; i ++){
