@@ -1,6 +1,6 @@
 package com.company.baekjoon.구현;
 
-public class Main {
+public class 정규표현식 {
     public static void main(String[] args) {
         String text = "file.txt";
 //        String extension = text.split(".")[1];
