@@ -72,9 +72,9 @@ public class Main {
 
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
-                if(flag && bomb[i][j]) bw.write("* ");
-                else if (!open[i][j]) bw.write(". ");
-                else bw.write(map[i][j] + " ");
+                if(flag && bomb[i][j]) bw.write("*");
+                else if (!open[i][j]) bw.write(".");
+                else bw.write(map[i][j]);
             }
             bw.write("\n");
         }
