@@ -11,13 +11,12 @@ public class Main {
 
         int[] arr = new int[n];
 
+        // 기준 : 두 말 사이의 거리
+        int lt = 1; // 최소거리
+        int rt = arr[n - 1]; // 최대거리
+
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-
-        Arrays.sort(arr);
-
-        for(int i = 0; i < c-2; i++);
-
     }
 }
