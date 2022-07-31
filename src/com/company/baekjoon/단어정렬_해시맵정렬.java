@@ -3,7 +3,7 @@ package com.company.baekjoon;
 import java.io.*;
 import java.util.*;
 
-public class 단어정렬 {
+public class 단어정렬_해시맵정렬 {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
