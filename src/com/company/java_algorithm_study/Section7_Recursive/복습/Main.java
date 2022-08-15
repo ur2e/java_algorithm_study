@@ -1,10 +1,10 @@
-package com.company.java_algorithm_study.Section7_Recursive.복습;
-
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
-
-public class Main {
+//package com.company.java_algorithm_study.Section7_Recursive.복습;
+//
+//import java.util.LinkedList;
+//import java.util.Queue;
+//import java.util.Scanner;
+//
+//public class Main {
 //    int bfs(int s, int e, int level){
 //        int[] ch = new int[10000];
 //
@@ -22,13 +22,13 @@ public class Main {
 //        return level;
 //
 //    }
-    public static void main(String[] args) {
-        Main T = new Main();
-        Scanner sc = new Scanner(System.in);
-
-        int s = sc.nextInt();
-        int e = sc.nextInt();
-
-        //T.bfs(s, e, 0);
-    }
-}
+//    public static void main(String[] args) {
+//        Main T = new Main();
+//        Scanner sc = new Scanner(System.in);
+//
+//        int s = sc.nextInt();
+//        int e = sc.nextInt();
+//
+//        T.bfs(s, e, 0);
+//    }
+//}
