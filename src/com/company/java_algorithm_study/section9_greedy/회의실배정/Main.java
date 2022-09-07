@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 class Time implements Comparable<Time> {
-    public int s, e;
+    int s, e;
     Time(int s, int e) {
         this.s = s;
         this.e = e;
