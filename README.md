@@ -1,6 +1,4 @@
 # java_algorithm_study
-
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=ur2e)](https://github.com/anuraghazra/github-readme-stats)
 ## 자바 입문 
 - 리터럴
     
