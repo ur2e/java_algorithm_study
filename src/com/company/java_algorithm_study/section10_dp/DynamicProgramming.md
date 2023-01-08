@@ -19,7 +19,30 @@
   - 정렬된 배열에서 자기 자신(i)의 앞을 탐색한다.
   - (조건5) 무게를 비교하여 자신보다 더 가벼운 벽돌 중 가장 높이가 높은 값을 찾는다.
   - 찾은 높이 값에 자신의 높이 값을 더하고 dy[i]에 값을 저장한다.
-- 기억할 것
-  - 이중포문 안에서 maxH, dy, answer 값 다 처리하려하지말자
-  - maxH만 알면 dy, answer 둘 다 처리할 수 있다.
-  - 풀이를 좀 잘 정리한 다음에 코드 작성하기
+  - 기억할 것
+    - 이중포문 안에서 maxH, dy, answer 값 다 처리하려하지말자
+    - maxH만 알면 dy, answer 둘 다 처리할 수 있다.
+    - 풀이를 좀 잘 정리한 다음에 코드 작성하기
+    - 정렬 
+      ```java
+        class Brick implements Comparable<Brick> {
+          int s, h, w;
+          
+            Brick(int s, int h, int w){
+              this.s = s;
+              this.h = h;
+              this.w = w;
+            }
+
+            @Override
+            public int compareTo(Brick o){
+              return o.s - this.s;
+            }
+        } 
+      ```
+3. 동전교환(냅색 알고리즘)
+- 주의
+  - 동전 갯수가 50개 이상 넘어가면 DFS로 풀 때 1초 시간 제한을 초과한다. 
+  - DP로 풀자 !
+- 해결법
+  - dy[i] : i 금액을 만드는데 드는 동전의 최소 개수, dy[10] = 10원을 만드는데 필요한 동전의 최소 개수 
