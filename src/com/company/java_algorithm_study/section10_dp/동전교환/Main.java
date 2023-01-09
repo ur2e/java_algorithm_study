@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
-    static int n , m;
+    static int n , m; // n = 동전 종류개수, m = 거스름돈
     static int[] dy;
     public int solution(int[] coin){
         Arrays.fill(dy, Integer.MAX_VALUE); // dy에는 최소 동전 개수를 계속 업데이트해줘야 해서 가장 큰 값으로 초기화한다.
