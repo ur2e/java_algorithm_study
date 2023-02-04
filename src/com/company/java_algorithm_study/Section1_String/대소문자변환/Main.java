@@ -1,8 +1,8 @@
-package com.company.java_algorithm_study.Section1_String;
+package com.company.java_algorithm_study.Section1_String.대소문자변환;
 
 import java.util.Scanner;
 
-public class 대소문자변환 {
+public class Main {
     public String Solution(String str){
         StringBuilder answer = new StringBuilder();
 
@@ -14,7 +14,7 @@ public class 대소문자변환 {
         return answer.toString();
     }
     public static void main(String[] args) {
-        대소문자변환 T = new 대소문자변환();
+        Main T = new Main();
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         System.out.println(T.Solution(str));

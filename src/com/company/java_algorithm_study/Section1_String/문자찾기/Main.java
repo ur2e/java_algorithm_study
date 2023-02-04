@@ -1,9 +1,8 @@
-package com.company.java_algorithm_study.Section1_String;
+package com.company.java_algorithm_study.Section1_String.문자찾기;
 
 import java.util.Scanner;
 
-// solution 함수에 static 쓰면 객체 생성할 필요 X
-public class 문자찾기 {
+public class Main {
     public int Solution(String str, char c){
         int answer = 0;
 
@@ -20,12 +19,11 @@ public class 문자찾기 {
             if (x == c) answer++;
         }
 
-
         return answer;
     }
 
     public static void main(String[] args) {
-        문자찾기 T = new 문자찾기(); // static이면 이거 필요 없어
+        Main T = new Main(); // static이면 이거 필요 없어
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         char c = sc.next().charAt(0);
