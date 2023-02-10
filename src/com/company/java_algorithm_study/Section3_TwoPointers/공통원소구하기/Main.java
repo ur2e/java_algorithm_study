@@ -1,4 +1,4 @@
-package com.company.java_algorithm_study.Section3_Twopointers.공통원소구하기;
+package com.company.java_algorithm_study.Section3_TwoPointers.공통원소구하기;
 
 import java.util.*;
 class Main {

@@ -1,4 +1,4 @@
-package com.company.java_algorithm_study.Section3_Twopointers.최대길이연속부분수열;
+package com.company.java_algorithm_study.Section3_TwoPointers.최대길이연속부분수열;
 
 import java.util.Scanner;
 

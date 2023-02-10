@@ -1,4 +1,4 @@
-## 자바 String 관련 함수 정리 
+## String 관련 함수 정리 
 
 1. toLowerCase() / toUpperCase()
     문자열을 모두 소문자나 대문자로 변경하고자할 때 사용한다.
@@ -82,8 +82,25 @@ public class StringDemo {
 }
  
 ```
+## StringBuilder 클래스 관련 메소드
+1. reverse() : 문자열 뒤집기 
+```java
+String tmp = new StringBuilder(s).reverse().toString();
+``` 
+  * 직접 문자를 뒤집고 싶다면
+    * String을 char 배열로 바꾼다.
+    * lt(배열의 맨 왼쪽 포인터), rt(배열의 맨 오른쪽 포인터)를 활용한다.
+      * ```java
+        while(lt < rt) {
+            if(조건) { swap(arr[lt], arr[rt]);}
+            lt++; rt--;
+        }
+        ```
+        
 
-## 자바 Character 클래스 관련 메소드
+
+
+## Character 클래스 관련 메소드
 1. Character.isUpperCase(c)
     is~() : 특정 대상인지를 판별
     - 대/소문자 : Character.isUpperCase(c), Character.isLowerCase(c)
@@ -93,9 +110,11 @@ public class StringDemo {
 
     toXXX() : 특정 대상 타입으로 변환
    - 대.소문자 : Character.toUpperCase(c), Character.toLowerCase(c)
-- ![img.png](img.png)
+- ![img.png](img/img.png)
 
-- Character.toString(c) : char -> String 타입 변환 
+- Character.toString(c) : char -> String 타입 변환
+
 ### 출처
 https://itellyhood.tistory.com/71
 https://velog.io/@donglee99/JAVA-String-%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%A0%95%EB%A6%AC
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=javaking75&logNo=140187408692

@@ -1,4 +1,4 @@
-package com.company.java_algorithm_study.Section1_String;
+package com.company.java_algorithm_study.Section1_String.문장및단어뒤집기;
 
 import java.util.*;
 class 특정문자뒤집기 {

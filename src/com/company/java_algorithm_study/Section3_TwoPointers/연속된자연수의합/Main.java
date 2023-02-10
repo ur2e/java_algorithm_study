@@ -1,4 +1,4 @@
-package com.company.java_algorithm_study.Section3_Twopointers.연속된자연수의합;
+package com.company.java_algorithm_study.Section3_TwoPointers.연속된자연수의합;
 
 import java.util.Scanner;
 

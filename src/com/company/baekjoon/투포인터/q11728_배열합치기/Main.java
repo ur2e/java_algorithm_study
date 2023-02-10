@@ -1,6 +1,6 @@
 package com.company.baekjoon.투포인터.q11728_배열합치기;
 
-import com.company.java_algorithm_study.Section3_Twopointers.최대매출.Me;
+import com.company.java_algorithm_study.Section3_TwoPointers.최대매출.Me;
 
 import java.io.*;
 import java.util.*;

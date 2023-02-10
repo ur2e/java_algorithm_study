@@ -1,9 +1,9 @@
-package com.company.java_algorithm_study.Section1_String;
+package com.company.java_algorithm_study.Section1_String.문장및단어뒤집기;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class 단어뒤집기StringBuilder {
+public class StringBuilder풀이 {
     public ArrayList<String> Solution(String[] str) {
         ArrayList<String> answer= new ArrayList<>();
 
@@ -16,7 +16,7 @@ public class 단어뒤집기StringBuilder {
     }
 
     public static void main(String[] args) {
-        단어뒤집기StringBuilder T = new 단어뒤집기StringBuilder();
+        StringBuilder풀이 T = new StringBuilder풀이();
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         String[] strArr = new String[num];

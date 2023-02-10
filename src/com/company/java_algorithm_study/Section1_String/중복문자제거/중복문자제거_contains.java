@@ -1,3 +1,5 @@
+package com.company.java_algorithm_study.Section1_String.중복문자제거;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 

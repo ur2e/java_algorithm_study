@@ -1,4 +1,4 @@
-package com.company.java_algorithm_study.Section3_Twopointers.최대매출;
+package com.company.java_algorithm_study.Section3_TwoPointers.최대매출;
 
 import java.util.Scanner;
 

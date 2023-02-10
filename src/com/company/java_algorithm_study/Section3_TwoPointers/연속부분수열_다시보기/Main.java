@@ -1,4 +1,4 @@
-package com.company.java_algorithm_study.Section3_Twopointers.연속부분수열_다시보기;
+package com.company.java_algorithm_study.Section3_TwoPointers.연속부분수열_다시보기;
 
 import java.util.Scanner;
 

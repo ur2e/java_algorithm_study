@@ -1,6 +1,5 @@
-package com.company.java_algorithm_study.Section3_Twopointers.두배열합치기;
+package com.company.java_algorithm_study.Section3_TwoPointers.두배열합치기;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
