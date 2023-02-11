@@ -1,5 +1,6 @@
 package com.company.java_algorithm_study.Section1_String.중복문자제거;
 
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class 중복문자제거_indexOf {
@@ -14,7 +15,6 @@ public class 중복문자제거_indexOf {
                 answer += str.charAt(i);
             }
         }
-
         return answer;
     }
     public static void main(String[] args) {
