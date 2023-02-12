@@ -1,4 +1,4 @@
-package com.company.java_algorithm_study.Section1_String;
+package com.company.java_algorithm_study.Section1_String.팰린드롬;
 
 import java.util.Scanner;
 

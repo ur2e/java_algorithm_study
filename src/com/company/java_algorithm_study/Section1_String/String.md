@@ -1,3 +1,25 @@
+1. 중복문자제거
+   * indexOf로 문자의 위치와 문자가 처음 나타난 위치를 비교해서 중복문자 찾기
+   ```java
+   // 자기 위치(charAt())와 처음 발견된 위치(indexOf())가 다르면 중복 문자이다.
+   System.out.println(str.charAt(i)+ " " + i + " " + str.indexOf(str.charAt(i)));
+   ```
+1. 회문문자열
+      * 문자열의 반만 탐색하여 문자열이 대칭인지 확인
+      * ```java
+           int len = str.length(); // 문자열 길이가 홀수일때 정 가운데 위차한 글자는 대칭을 고려하지 않아도 된다.
+           for(int i = 0; i < len/2; i++) {
+                  if(str.charAt(i) != str.charAt(len-i-1)){
+                      return "NO";
+               }
+           }
+      * StringBuilder().reverse && (String.equalsIgnoreCase() || String.equals()) 활용
+      * ```java
+        String tmp = new StringBuilder(str).reverse().toString();
+        if(str.equalsIgnoreCase(tmp)) answer="YES";
+        ```
+
+
 ## String 관련 함수 정리 
 
 1. toLowerCase() / toUpperCase()
@@ -96,7 +118,7 @@ String tmp = new StringBuilder(s).reverse().toString();
             lt++; rt--;
         }
         ```
-        
+
 
 
 
