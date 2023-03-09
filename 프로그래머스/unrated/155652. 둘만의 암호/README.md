@@ -2,6 +2,52 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/155652) 
 
+### String 클래스의 contains() 메서드를 사용했다면 쉽게 풀 수 있었다.
+### z -> a 라는 순회조건이 들어가면 가볍게 생각하면 안될 것 같다.
+하지만 나는 char c가 있을 때
+c < skip[i] <= c + index 라고 생각해서 풀려했다. 
+아래는 실패한 나의 코드... 
+
+```        StringBuilder sb = new StringBuilder();
+        
+        int n = skip.length();
+        
+        // skip에 해당하는 int 배열 생성
+        int[] skipInt = new int[n];
+        char[] chars = skip.toCharArray();
+        
+        for(int i = 0; i < n; i++) {
+            skipInt[i] = (int)chars[i];
+        }
+        
+        boolean flag = false;
+        for(char c: s.toCharArray()) {
+            int skipCount = 0;
+            int x = (int) c;
+            
+            for(int i = 0; i < n; i++) {
+                if(skipInt[i] >= x && skipInt[i] <= x + index){
+                    skipCount++;
+                    
+                    if((char)skipInt[i] == 'z' && flag == false) {
+                        flag = true;
+                        i = 0;
+                    }
+                }
+            }
+            
+            int charToInt = x + index + skipCount;
+            
+            if(charToInt > 122)   charToInt -= 26;
+            
+            sb.append(String.valueOf((char)(charToInt)));
+        }
+        
+        String answer = sb.toString();
+        return answer;
+    }
+```
+
 ### 성능 요약
 
 메모리: 78.6 MB, 시간: 0.97 ms
