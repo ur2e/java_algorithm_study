@@ -2,8 +2,7 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/155652) 
 
-### String 클래스의 contains() 메서드를 사용했다면 쉽게 풀 수 있었다.
-### z -> a 라는 순회조건이 들어가면 가볍게 생각하면 안될 것 같다.
+
 하지만 나는 char c가 있을 때
 c < skip[i] <= c + index 라고 생각해서 풀려했다. 
 아래는 실패한 나의 코드... 
