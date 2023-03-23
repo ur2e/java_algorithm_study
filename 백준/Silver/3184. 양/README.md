@@ -1,4 +1,4 @@
-# [Silver I] 양 - 3184 
+# [Silver I] 양 - 3184 25분 입력받을 때 i, j 착각하지말 것 
 
 [문제 링크](https://www.acmicpc.net/problem/3184) 
 
