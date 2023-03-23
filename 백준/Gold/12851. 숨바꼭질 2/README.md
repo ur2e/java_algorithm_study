@@ -2,6 +2,10 @@
 
 [문제 링크](https://www.acmicpc.net/problem/12851) 
 
+# 방문체크 - 같은 레벨 이후에 하고 싶다면 
+Pos curr = q.poll();
+visited[curr.x] = true;
+
 ### 성능 요약
 
 메모리: 44352 KB, 시간: 200 ms
