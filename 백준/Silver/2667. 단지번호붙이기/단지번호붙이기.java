@@ -1,5 +1,4 @@
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -9,7 +8,7 @@ public class Main {
     static int[] dx = {0, 1, 0, -1};
     static int[] dy= {1, 0, -1, 0};
     static int n;
-    static int[][] map, visited;
+    static int[][] map;
 
     static class Pos {
         int x, y;
@@ -23,7 +22,8 @@ public class Main {
         int sum = 1;
         Queue<Pos> q = new LinkedList<>();
         q.offer(pos);
-        visited[pos.x][pos.y] = 1;
+        map[pos.x][pos.y] = 0;
+        
         while(!q.isEmpty()){
             Pos c = q.poll();
 
@@ -31,8 +31,8 @@ public class Main {
                 int nx = c.x + dx[i];
                 int ny = c.y + dy[i];
 
-                if(nx >= 0 && nx < n && ny >= 0 && ny < n && map[nx][ny] == 1 && visited[nx][ny] == 0){
-                    visited[nx][ny] = 1;
+                if(nx >= 0 && nx < n && ny >= 0 && ny < n && map[nx][ny] == 1){
+                    map[nx][ny] = 0;
                     q.offer(new Pos(nx, ny));
                     sum++;
                 }
@@ -45,7 +45,6 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         n = Integer.parseInt(br.readLine());
         map = new int[n][n];
-        visited = new int[n][n];
         int cnt = 0;
         List<Integer> ans = new ArrayList<>();
         for(int i = 0; i < n; i++){
@@ -57,7 +56,7 @@ public class Main {
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if(map[i][j] == 1 && visited[i][j] == 0){
+                if(map[i][j] == 1){
                     ans.add(dfs(new Pos(i, j)));
                     cnt++;
                 }
@@ -72,3 +71,4 @@ public class Main {
         }
     }
 }
+
