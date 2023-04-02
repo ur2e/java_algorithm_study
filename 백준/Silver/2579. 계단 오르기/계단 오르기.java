@@ -1,4 +1,5 @@
 
+
 import java.util.Scanner;
 
 public class Main {
@@ -19,10 +20,10 @@ public class Main {
             if( n > 2) {
                 d[2] = stair[1] + stair[2];
                 for (int i = 3; i <= n; i++) {
-                    d[i] = Math.max(d[i - 2] + stair[i], d[i-3] + stair[i-1] + stair[i]);
-                    //System.out.println(i +"번째 : " + d[i]);
+                    //d[i] = Math.max(d[i - 2] + stair[i], d[i-3] + stair[i-1] + stair[i]);
+                    d[i] = Math.max(d[i-2], d[i-3]+stair[i-1]) + stair[i];
                 }
-                
+
                 answer = d[n];
             }
             else {
