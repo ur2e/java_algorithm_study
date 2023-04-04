@@ -1,38 +1,37 @@
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.StringTokenizer;
-import java.util.TreeMap;
+
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+
+        int[] arr = new int[n+1];
+        int[] d = new int[n+1];
+
         StringTokenizer st = new StringTokenizer(br.readLine());
-        TreeMap<Integer, Integer> treeMap = new TreeMap<>();
-
-        int n = Integer.parseInt(st.nextToken());
-
-        int[] arr = new int[n];
-        int[] d = new int[n];
-        st = new StringTokenizer(br.readLine());
-        for(int i = 0; i < n; i++) {
-            int x = Integer.parseInt(st.nextToken());
-            arr[i] = x;
+        for (int i = 1; i <= n; i++) {
+            arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        d[0] = 1;
-        int answer = 1;
-        for(int i = 1; i < n; i++) {
-            int max = 0;
-            for(int j = 0; j < i; j++) {
-                if(arr[i] - arr[j] < 0) {
-                    max = Math.max(max, d[j]);
+        Arrays.fill(d, 1);
+        int max = 0;
+        for (int i = 1; i <= n; i++) {
+            for(int j = 1; j < i; j++){
+                if(arr[j] > arr[i]) {
+                    d[i] = Math.max(d[i], d[j]+1);
                 }
             }
-            d[i] = max+1;
-            answer = Math.max(answer, d[i]);
+            max = Math.max(max, d[i]);
         }
 
-        System.out.println(answer);
+        System.out.println(max);
     }
 }
