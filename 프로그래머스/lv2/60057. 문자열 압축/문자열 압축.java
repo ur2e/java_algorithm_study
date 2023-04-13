@@ -17,24 +17,23 @@ class Solution {
                 if(prev.equals(curr)){
                     num++;
                 } else {
-                    if(num != 1){
-                        sb.append(String.valueOf(num)).append(prev);
-                    } else { 
-                        sb.append(prev);
-                    }
+                    if(num!=1){
+                        sb.append(num);
+                    } 
+                    sb.append(prev);
+
                     num = 1;
                     prev = curr;
                 }   
             }
             if(num!=1){
-                sb.append(String.valueOf(num)).append(prev);
-            } else {
-                sb.append(prev);
-            }
+                sb.append(num);
+            } 
+            
+            sb.append(prev);
+            
             max = Math.min(max, sb.toString().length());
             size--;
-        
-            
         }
         return max;
     }
