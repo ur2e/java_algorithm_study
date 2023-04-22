@@ -3,21 +3,23 @@ package com.company.newlecture.CH6_DFS;
 import java.util.Arrays;
 
 public class Q1_가장가까운큰수 {
-    static int[] arr, ch;
-    static int N, pivot, answer; // pivot 대신 target
+    static int[] arr, ch; // 중복 허용 X라서 ch 배열 필요
+    static int N, target, answer; // pivot 대신 target
+    boolean flag;
 
     private void bfs(int L, int num){
+        if(flag)    return;
         if(L == N) {
-            if (num > pivot) {
-                answer = Math.min(answer, num);
-                return;
+            if (num > target) {
+                answer = num;
+                flag = true;
             }
         }
         else {
             for(int i = 0; i < N; i++){
                 if(ch[i] == 0){
                     ch[i] = 1;
-                    bfs(L+1, num * 10 + arr[i]);
+                    bfs(L+1, num * 10 + arr[i]); // point ! !  num*10 + arr[i] ~ WOW
                     ch[i] = 0;
                 }
             }
@@ -29,16 +31,19 @@ public class Q1_가장가까운큰수 {
         N = num.length();
         arr = new int[N];
         ch = new int[N];
-        pivot = n;
+        target = n;
+        flag = false; // static 변수라 계속 초기화 해주긩 ~
         answer =Integer.MAX_VALUE;
+
         for (int i = 0; i < N; i++) {
             arr[i] = num.charAt(i) - '0';
         }
+
         Arrays.sort(arr);
 
         bfs(0, 0);
 
-        return answer = answer == Integer.MAX_VALUE? -1 : answer;
+        return answer = !flag ? -1 : answer;
     }
 
     public static void main(String[] args){
